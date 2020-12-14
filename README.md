@@ -53,7 +53,7 @@ virtualenv -p /usr/bin/python3 venv
 . ./venv/bin/activate
 pip install -r requirements.txt
 # <Create local_config.py with variables as given below>
-python3 -m Javes-2.0
+python3 -m javes-2.0
 ```
 
 
@@ -69,7 +69,7 @@ python3 -m Javes-2.0
     [-] APP_ID:   You can get this value from https://my.telegram.org
     [-] API_HASH :   You can get this value from https://my.telegram.org
     
-[+] The Lightning Bot will not work without setting the mandatory vars.
+[+] The Javes Bot will not work without setting the mandatory vars.
 ```
 
 
