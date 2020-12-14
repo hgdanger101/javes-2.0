@@ -226,12 +226,12 @@ async def upstream(ups):
         origin = repo.create_remote('upstream', off_repo)
         origin.fetch()
         force_update = True
-        repo.create_head('master', origin.refs.master)
+        repo.create_head('main', origin.refs.master)
         repo.heads.master.set_tracking_branch(origin.refs.master)
         repo.heads.master.checkout(True)
 
     ac_br = repo.active_branch.name
-    if ac_br != 'master':
+    if ac_br != 'main':
         await ups.edit(
             f'**[UPDATER]:**` Looks like you are using your own custom branch ({ac_br}). '
             'in that case, Updater is unable to identify '
@@ -278,7 +278,7 @@ async def upstream(ups):
         await ups.edit(
             '`Force-Syncing to latest stable userbot code, please wait...`')
     else:
-        await ups.edit('`Finiding your heroku app.....`')
+        await ups.edit('`Finding your heroku app.....`')
     # We're in a Heroku Dyno, handle it's memez.
     if HEROKU_APIKEY is not None:
         import heroku3
@@ -314,7 +314,7 @@ async def upstream(ups):
         else:
             remote = repo.create_remote("heroku", heroku_git_url)
         try:
-            remote.push(refspec="HEAD:refs/heads/master", force=True)
+            remote.push(refspec="HEAD:refs/heads/main", force=True)
         except GitCommandError as error:
             await ups.edit(f'{txt}\n`Here is the error log:\n{error}`')
             repo.__del__()
@@ -365,7 +365,7 @@ async def speedtst(spd):
 
 def speed_convert(size):
     """
-    Hi human, you can't read bytes?
+    Hi human, you can't read bytes? MaaChod Speed Ek Dum TapaTap Agg 🔥 Hai Bhai Aag 🔥 
     """
     power = 2**10
     zero = 0
@@ -1028,12 +1028,12 @@ async def upstream(ups):
         origin = repo.create_remote('upstream', off_repo)
         origin.fetch()
         force_update = True
-        repo.create_head('master', origin.refs.master)
+        repo.create_head('main', origin.refs.master)
         repo.heads.master.set_tracking_branch(origin.refs.master)
         repo.heads.master.checkout(True)
 
     ac_br = repo.active_branch.name
-    if ac_br != 'master':
+    if ac_br != 'main':
         await ups.reply(
             f'**[UPDATER]:**` Looks like you are using your own custom branch ({ac_br}). '
             'in that case, Updater is unable to identify '
@@ -1116,7 +1116,7 @@ async def upstream(ups):
         else:
             remote = repo.create_remote("heroku", heroku_git_url)
         try:
-            remote.push(refspec="HEAD:refs/heads/master", force=True)
+            remote.push(refspec="HEAD:refs/heads/main", force=True)
         except GitCommandError as error:
             await ups.reply(f'{txt}\n`Here is the error log:\n{error}`')
             repo.__del__()
