@@ -7,7 +7,7 @@ import telethon.utils
 from telethon import TelegramClient
 
 from userbot import CMD_HNDLR, bot
-from userbot.Config import Var
+from userbot.Configs import Var
 from userbot.uniborgConfig import Config
 from userbot.utils import load_assistant, load_module, start_assistant
 
@@ -27,7 +27,7 @@ async def startup_log_all_done():
     try:
         await bot.send_message(
             TELE,
-            f"**Black Lightning has been deployed.\nSend** `{CMD_HNDLR}alive` **to see if the bot is working.\n\nAdd** @{BOTNAME} **to this group and make it admin for enabling all the features of userbot**",
+            f"**Javes 2.0 has been deployed.\nSend** `{CMD_HNDLR}alive` **to see if the bot is working.\n\nAdd** @{BOTNAME} **to this group and make it admin for enabling all the features of userbot**",
         )
     except BaseException:
         print("Either PRIVATE_GROUP_ID is wrong or you have left the group.")
